@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind&family=Montserrat:wght@600&family=UnifrakturCook:wght@700&display=swap');
+:root {
+	--primary-button-color: #40a04b;
+	--secondary-button-color: #091611;
+	--text-color: #f4f9f0;
+	--accent-color: #40a07b;
+	--paragraphs-font: 'Hind', sans-serif;
+	--headings-font: 'Montserrat', sans-serif;
+	--h1-font: 'UnifrakturCook', cursive;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #000000;
+	color: var(--text-color);
+}
+
+p {
+	font-family: var(--paragraphs-font);
+}
+
+header {
+	padding: 10px;
+	font-family: var(--headings-font);
+	color: var(--accent-color);
+	box-shadow: 0px 5px 10px var(--accent-color);
+}
+
+h1 {
+	font-family: var(--h1-font);
+	font-size: 3.5rem;
+}
+
+h2 {
+	font-size: 1rem;
+	color: var(--text-color);
+}
+.characters-list {
+	margin-top: 1rem;
+	padding: 1rem;
+	display: flex;
+	gap: 2rem;
+	justify-content: center;
+}
+span {
+	background-color: var(--accent-color);
+	padding: 1rem;
+	border-radius: 1rem;
+	font-size: larger;
+	font-family: var(--headings-font);
+	cursor: pointer;
+}
+
+.characters-display {
+	padding: 1rem;
+	margin: 2rem;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 2rem;
+}
+
+/* Each Character Card */
+.card {
+	width: 300px;
+	height: 400px;
+	background: var(--secondary-button-color);
+	border-radius: 15px;
+	box-shadow: 1px 5px 60px 0px #100a886b;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.card .card-border-top {
+	width: 60%;
+	height: 3%;
+	background: var(--accent-color);
+	margin: auto;
+	border-radius: 0px 0px 15px 15px;
+}
+
+.card p {
+	font-weight: 600;
+	color: white;
+	text-align: center;
+	display: block;
+	padding: 10px;
+	font-size: 2rem;
+}
+
+.card .votes {
+	font-weight: 400;
+	color: white;
+	display: block;
+	text-align: center;
+	padding-top: 3px;
+	font-size: 20px;
+}
+
+.card .img {
+	width: 70%;
+	height: 50%;
+	border-radius: 15px;
+	margin: auto;
+	margin-top: 25px;
+}
+
+button {
+	padding: 8px 25px;
+	display: block;
+	margin: auto;
+	border-radius: 8px;
+	border: none;
+	margin-top: 30px;
+	background: var(--primary-button-color);
+	color: var(--text-color);
+	font-weight: 600;
+	cursor: pointer;
+}
+
+button:hover {
+	background: var(--accent-color);
+}
+
+.reset {
+	background-color: red;
+	color: black;
+	font-weight: 600;
+}
+.reset:hover {
+	color: white;
+	background-color: #ad2424;
+}
+
+/* Input field styles */
+.form__group {
+	position: relative;
+	padding: 20px 0 0;
+	width: 50%;
+	max-width: 180px;
+	margin: auto;
+}
+
+.form__field {
+	width: 100%;
+	border: none;
+	border-bottom: 2px solid #9b9b9b;
+	outline: 0;
+	font-size: 17px;
+	color: #fff;
+	padding: 7px 0;
+	background: transparent;
+	transition: border-color 0.2s;
+}
+
+.form__field::placeholder {
+	color: transparent;
+}
+
+.form__field:placeholder-shown ~ .form__label {
+	font-size: 17px;
+	cursor: text;
+	top: 20px;
+}
+
+.form__label {
+	position: absolute;
+	top: 0;
+	display: block;
+	transition: 0.2s;
+	font-size: 17px;
+	font-family: var(--headings-font);
+	color: #9b9b9b;
+	pointer-events: none;
+}
+
+.form__field:focus {
+	padding-bottom: 6px;
+	font-weight: 700;
+	border-width: 3px;
+	border-image: linear-gradient(to right, #116399, #38caef);
+	border-image-slice: 1;
+}
+
+.form__field:focus ~ .form__label {
+	position: absolute;
+	top: 0;
+	display: block;
+	transition: 0.2s;
+	font-size: 17px;
+	color: #38caef;
+	font-weight: 700;
+}
+
+/* reset input */
+.form__field:required,
+.form__field:invalid {
+	box-shadow: none;
+}
